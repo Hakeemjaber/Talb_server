@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+
 const MealSchema = new Schema({
     name: String,
     price: {
@@ -9,10 +10,22 @@ const MealSchema = new Schema({
         type: String,
         require: false,
     },
-    // option:{
-    //     type:Array,
-    //     require: true,
-    // }
+    category: {
+        type: [],
+        require: true,
+    },
+    ingredients: {
+        type: [{
+            id: String,
+            price: {
+                type: Number,
+                default: 0
+            }
+        }],
+    },
+    Restaurant_Id: {
+        type: String,
+    },
 });
 const Meals_MODEL = model("meals", MealSchema);
 module.exports = Meals_MODEL;

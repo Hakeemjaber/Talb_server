@@ -31,7 +31,8 @@ app.post("/whatmyResturant", (req, res) => {
     res.status(200).json({
         fullname: title + ' ' + phone + ' ' + address,
     });
-});
+});  
+
 // app.post("/creatNewUser", (req, res) => {
 //     const { name, phone, points ,userName , pass} = req.body;
 

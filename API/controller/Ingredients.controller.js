@@ -1,10 +1,9 @@
 const Ingredients_MODEL = require("../Models/ingredients.model");
-const { creatNewMealsWithIngredients } = require("./Meals.controller");
+// const { creatNewMealsWithIngredients } = require("./Meals.controller");
 
 
 const creatNewIngredients = (req, res) => {
     const { name, pricing, image, ischecked, typeOf, mealname } = req.body;
-    if (!creatNewMealsWithIngredients()) {
 
         Ingredients_MODEL.create({
             name: name,
@@ -26,7 +25,7 @@ const creatNewIngredients = (req, res) => {
                     errorMesseage: e.messeage,
                 });
             });
-    }
+    
 }
 
 

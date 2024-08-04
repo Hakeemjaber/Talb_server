@@ -1,9 +1,12 @@
 const { Router } = require("express");
-const { creatNewMeals, creatNewMealsWithIngredients } = require("../controller/Meals.controller");
+const { creatNewMeals,updateDatemeals,getAllMeals ,getTest} = require("../controller/Meals.controller");
 
-const MealsRouter = Router();
+
+const MealsRouter = Router()
 
 MealsRouter.post("/creatNewMeals", creatNewMeals);
-MealsRouter.post("/creatNewMealsWithIngredients", creatNewMealsWithIngredients);
+MealsRouter.post("/updateDatemeals", updateDatemeals);
+MealsRouter.post("/getAllMeals", getAllMeals);
+MealsRouter.get("/getTest", getTest);
 
 module.exports = MealsRouter;
